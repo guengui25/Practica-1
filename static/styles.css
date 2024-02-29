@@ -1,0 +1,171 @@
+/*
+Colores fluor 
+
+Unicornios siempre 
+Mezcla el leopardo con rosa fucsia
+
+Pon a Elvis Presley 
+
+Haz una parte q incluya algo de rock una banda q de cringe verlo 
+
+Algo gotico 
+
+Barbie q no Falte
+
+Los tamagotchi de los 90
+*/
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  color: #ff0000;
+  text-align: center;
+
+  animation: rainbow 1s infinite linear;
+}
+
+@keyframes rainbow {
+  0% {
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  }
+  12% {
+    background: linear-gradient(to right,red, violet, indigo, blue, green, yellow, orange );
+  }
+  24% {
+    background: linear-gradient(to right,  orange ,red, violet, indigo, blue, green, yellow);
+  }
+  50% {
+    background: linear-gradient(to right, yellow, orange ,red, violet, indigo, blue, green);
+  }
+  63% {
+    background: linear-gradient(to right,green,yellow, orange ,red, violet, indigo, blue, );
+  }
+  78% {
+    background: linear-gradient(to right, blue, green,yellow, orange ,red, violet, indigo);
+  }
+  89% {
+    background: linear-gradient(to right, indigo, blue, green,yellow, orange ,red, violet);
+  }
+  100% {
+    background: linear-gradient(to right, violet, indigo, blue, green,yellow, orange ,red);
+  }
+}
+
+.Contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.Titulo{
+  
+  font-size: 100px;
+
+  color: #ffffff; /* Texto blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+  animation: moveAround 4s infinite linear; /* Nueva animación para mover aleatoriamente */
+  
+}
+
+.Imagen{
+  background-image: url("https://www.nebrija.com/images/profesores/javier-yebel-de-blas.jpg");
+  
+  background-size: cover;
+
+  width: 300px;
+  height: 300px;
+  animation: rotate 1s infinite linear reverse;
+}
+
+.Imagen:hover {
+  background-image: url("https://www.nebrija.com/images/profesores/javier-de-blas.jpg");
+  animation: rotate 1s infinite linear;
+}
+
+
+
+@keyframes moveAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(-20px, -20px);
+  }
+  75% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+.Cita{
+
+  font-size: 55px;
+
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.Boton{
+
+  font-size: 50px;
+  
+  padding: 15px 20px;
+  margin: 10px;
+  background-color: #008CBA;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Boton:hover {
+  background-color: #2bff00;
+
+  animation: moveAround 0.5s infinite linear;
+
+}
+
+.Boton:active {
+  transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+  background-color: #00385a; /* Cambia el color de fondo al hacer clic */
+}
+
+
+
+
+/* 
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_images/Using_CSS_gradients 
+
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_animations/Using_CSS_animations
+*/
+
