@@ -15,14 +15,14 @@ const Quote: FunctionComponent<QuoteProps> = (props) => {
     <div class="Contenedor">
         <div class="Imagen"></div>
         <h1 class="Titulo">Random Quote</h1>
+        <image src= "https://www.alistdaily.com/wp-content/uploads/2017/10/ezgif.com-optimize-4.gif" alt="Gif tamagochi"></image>   
         <p class="Cita">{quote}</p>
         <br></br>
-        <br></br>
-        <button class="Boton">Useless button</button>
+        <button id="BotonJugueton">Useless button</button>
+        <script src="scripts.js"></script>
     </div>
     );
 }
-
 
 
 export default Quote;

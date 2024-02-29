@@ -21,7 +21,136 @@ body {
   color: #ff0000;
   text-align: center;
 
+  cursor: url("https://sweezy-cursors.com/wp-content/uploads/cursor/tamagochi-3d/tamagochi-3D-cursor-32x32.png"), auto;
+
   animation: rainbow 1s infinite linear;
+}
+
+
+.Contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Fila {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Titulo{
+  
+  font-size: 100px;
+
+  position: absolute;
+
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: moveAround 2s infinite linear;  
+}
+
+.Imagen{
+  background-image: url("https://www.nebrija.com/images/profesores/javier-yebel-de-blas.jpg");
+  
+  background-size: cover;
+
+  width: 300px;
+  height: 300px;
+  animation: rotate 1s infinite linear reverse;
+}
+
+.Imagen:hover {
+  background-image: url("https://www.nebrija.com/images/profesores/javier-de-blas.jpg");
+  animation: rotate 1s infinite linear;
+}
+
+
+
+
+
+.Cita{
+
+  font-size: 55px;
+
+  animation: blink 1s infinite;
+}
+
+
+
+
+#BotonJugueton{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+
+  font-size: 50px;
+  
+  padding: 15px 20px;
+  margin: 10px;
+  background-color: #008CBA;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+#BotonJugueton:hover {
+  background-color: #2bff00;
+
+  cursor: url("https://sweezy-cursors.com/wp-content/uploads/cursor/brick-game-console-tamagotchi/brick-game-console-tamagotchi-pointer-32x32.png"), auto;
+}
+
+.Boton:active {
+  transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+  background-color: #00385a; /* Cambia el color de fondo al hacer clic */
+}
+
+
+/*====================
+Animaciones
+======================*/
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(350px, 350px);
+  }
+  50% {
+    transform: translate(-350px, -350px);
+  }
+  75% {
+    transform: translate(350px, -350px);
+  }
+  100% {
+    transform: translate(-350px, 350px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes rainbow {
@@ -50,117 +179,6 @@ body {
     background: linear-gradient(to right, violet, indigo, blue, green,yellow, orange ,red);
   }
 }
-
-.Contenedor{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-}
-
-.Titulo{
-  
-  font-size: 100px;
-
-  color: #ffffff; /* Texto blanco */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra al texto */
-  animation: moveAround 4s infinite linear; /* Nueva animación para mover aleatoriamente */
-  
-}
-
-.Imagen{
-  background-image: url("https://www.nebrija.com/images/profesores/javier-yebel-de-blas.jpg");
-  
-  background-size: cover;
-
-  width: 300px;
-  height: 300px;
-  animation: rotate 1s infinite linear reverse;
-}
-
-.Imagen:hover {
-  background-image: url("https://www.nebrija.com/images/profesores/javier-de-blas.jpg");
-  animation: rotate 1s infinite linear;
-}
-
-
-
-@keyframes moveAround {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(20px, 20px);
-  }
-  50% {
-    transform: translate(-20px, -20px);
-  }
-  75% {
-    transform: translate(20px, -20px);
-  }
-  100% {
-    transform: translate(-20px, 20px);
-  }
-}
-
-.Cita{
-
-  font-size: 55px;
-
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-.Boton{
-
-  font-size: 50px;
-  
-  padding: 15px 20px;
-  margin: 10px;
-  background-color: #008CBA;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.Boton:hover {
-  background-color: #2bff00;
-
-  animation: moveAround 0.5s infinite linear;
-
-}
-
-.Boton:active {
-  transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
-  background-color: #00385a; /* Cambia el color de fondo al hacer clic */
-}
-
-
 
 
 /* 
