@@ -21,9 +21,15 @@ body {
   color: #ff0000;
   text-align: center;
 
-  cursor: url("https://sweezy-cursors.com/wp-content/uploads/cursor/tamagochi-3d/tamagochi-3D-cursor-32x32.png"), auto;
+  cursor: url("sources/cursor.png"),auto;
 
   animation: rainbow 1s infinite linear;
+}
+
+#Elvis{
+  position: absolute;
+  src: url("sources/elvis.png");
+  animation: rotate 2s infinite linear;
 }
 
 
@@ -42,7 +48,6 @@ body {
 }
 
 .Titulo{
-  
   font-size: 100px;
 
   position: absolute;
@@ -52,24 +57,9 @@ body {
   animation: moveAround 2s infinite linear;  
 }
 
-.Imagen{
-  background-image: url("https://www.nebrija.com/images/profesores/javier-yebel-de-blas.jpg");
-  
-  background-size: cover;
-
-  width: 300px;
-  height: 300px;
-  animation: rotate 1s infinite linear reverse;
+.publicidad{
+  animation: rotateAndMove 2s infinite linear;
 }
-
-.Imagen:hover {
-  background-image: url("https://www.nebrija.com/images/profesores/javier-de-blas.jpg");
-  animation: rotate 1s infinite linear;
-}
-
-
-
-
 
 .Cita{
 
@@ -78,21 +68,18 @@ body {
   animation: blink 1s infinite;
 }
 
-
-
-
 #BotonJugueton{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 
   font-size: 50px;
   
   padding: 15px 20px;
   margin: 10px;
-  background-color: #008CBA;
+  background-color: #000fba;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -101,12 +88,18 @@ body {
 #BotonJugueton:hover {
   background-color: #2bff00;
 
-  cursor: url("https://sweezy-cursors.com/wp-content/uploads/cursor/brick-game-console-tamagotchi/brick-game-console-tamagotchi-pointer-32x32.png"), auto;
+  cursor: url("sources/cursor-2.png"),auto;
 }
 
-.Boton:active {
-  transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
-  background-color: #00385a; /* Cambia el color de fondo al hacer clic */
+#BotonJugueton:active {
+  background-color: #ff0000;
+}
+
+#JAVI{
+  position: absolute;
+  top: 0;
+  left: 0;
+  src: local("sources/javi-1.jpg");  
 }
 
 
@@ -120,6 +113,18 @@ Animaciones
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateAndMove {
+  0% {
+    transform: rotate(0deg) translate(300px,300px);
+  }
+  50% {
+    transform: rotate(360deg) translate(-300px,-300px);
+  }
+  100% {
+    transform: rotate(0deg) translate(300px,300px);
   }
 }
 
@@ -185,5 +190,7 @@ Animaciones
 https://developer.mozilla.org/es/docs/Web/CSS/CSS_images/Using_CSS_gradients 
 
 https://developer.mozilla.org/es/docs/Web/CSS/CSS_animations/Using_CSS_animations
+
+https://es.stackoverflow.com/questions/442778/c%C3%B3mo-mover-un-bot%C3%B3n-aleatoriamente-con-html-o-css
 */
 
