@@ -15,20 +15,44 @@ body {
 }
 
 .Center{
+  margin-top: 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#Titulo{
+#Sonic {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transition: top 2s ease-in-out, left 2s ease-in-out;
+
+  z-index: 2
+}
+
+#Titulo {
+  margin-top: 200px;
   font-size: 100px;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  perspective: 1000px; 
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+#Titulo:hover {
+  transform: rotateY(360deg);
 }
 
 #Cita{
   font-size: 55px;
-  animation: blink 1s infinite;
+  animation: rainbow-text 4s infinite;
+  font-weight: bold;
+  border: 5px solid;
+  border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  border-image-slice: 1;
+
+  background-color: #000000;
 }
 
 .publicidad{
@@ -37,7 +61,8 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  max-width: 500px;
+
+  width: 500px;
   max-height: max-content;
 
   border: 5px solid;
@@ -55,24 +80,23 @@ body {
 
 #Elvis{
   animation: rotate 2s infinite linear;
+
+  height: 300px;
+  width: 300px;
 }
 
 #He-man{
   width: 400px;
   height: 400px;
-  background-size: cover;
-  background-image: url(/sources/He-man.jpg);
 }
 
 #He-man:hover {
-  background-image: url(/sources/javi-heman.jpeg);
+  src: url(/sources/javi-heman.jpeg);
 }
 
 #Fart {
   width: 300px;
   height: 300px;
-  background-size: cover;
-  background-image: url(/sources/fart.gif);
 }
 
 .multimedia{
@@ -80,13 +104,14 @@ body {
   max-height: 90%;
 }
 
-
 #BotonJugueton{
   position: absolute;
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.1s ease;
+
+  z-index: 1;
 
   font-size: 50px;
   
@@ -110,8 +135,12 @@ body {
 
 #JAVI{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
+}
+
+#ET:hover{
+    animation: rotateAndMove 4s infinite;
 }
 
 /*====================
@@ -178,6 +207,15 @@ Animaciones
   }
 }
 
+@keyframes rainbow-text {
+  0% { color: red; }
+  16.66% { color: orange; }
+  33.33% { color: yellow; }
+  49.99% { color: green; }
+  66.66% { color: blue; }
+  83.33% { color: indigo; }
+  100% { color: violet; }
+}
 
 /* 
 https://developer.mozilla.org/es/docs/Web/CSS/CSS_images/Using_CSS_gradients 

@@ -59,7 +59,34 @@ function animateImage() {
 
 animateImage();
 
+// Para reproducir un sonido
 function playSound(soundId) {
   var audio = document.getElementById(soundId);
   audio.play();
+}
+
+// Para mover a sonic
+function moverSonic() {
+  var sonic = document.getElementById('Sonic');
+
+  // Obtener dimensiones de la ventana
+  var windowWidth = window.innerWidth - sonic.clientWidth;
+  var windowHeight = window.innerHeight - sonic.clientHeight;
+
+  // Generar posiciones aleatorias para top y left
+  var randomTop = Math.floor(Math.random() * windowHeight);
+  var randomLeft = Math.floor(Math.random() * windowWidth);
+
+  // Aplicar nuevas posiciones
+  sonic.style.top = randomTop + 'px';
+  sonic.style.left = randomLeft + 'px';
+}
+
+// Para el otro javi
+function changeHeman() {
+  document.getElementById('He-man').src = '/sources/javi-heman.jpeg';
+}
+
+function restoreHeman() {
+  document.getElementById('He-man').src = '/sources/He-man.jpg';
 }
