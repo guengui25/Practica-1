@@ -1,18 +1,10 @@
-//Cargo las imagenes
-
-const Elvis = document.getElementById("Elvis");
-Elvis.src = "sources/elvis.png";
-
-const Tamagochi = document.getElementById("Tamagochi");
-Tamagochi.src = "sources/tamagochi.gif";
-
 //Script para el botón juguetón
 const BotonJugueton = document.getElementById("BotonJugueton");
 
 BotonJugueton.addEventListener('mouseover', () => {
   // Genera nuevas coordenadas para el botón
-  const newX = Math.random() * (window.innerWidth - BotonJugueton.clientWidth);
-  const newY = Math.random() * (window.innerHeight - BotonJugueton.clientHeight);
+  const newX = Math.random() * (globalThis.innerWidth - BotonJugueton.clientWidth);
+  const newY = Math.random() * (globalThis.innerHeight - BotonJugueton.clientHeight);
 
   // Aplica las nuevas coordenadas al estilo del botón
   BotonJugueton.style.left = `${newX}px`;
@@ -22,8 +14,8 @@ BotonJugueton.addEventListener('mouseover', () => {
 
 // Script para animar a Javi - No era la idea original, pero me gusta más
 const Javi = document.getElementById("JAVI");
-const screenWidth = window.innerWidth;
-const screenHeight = window.innerHeight;
+const screenWidth = globalThis.innerWidth;
+const screenHeight = globalThis.innerHeight;
 
 let x = 0;
 let y = 0;
@@ -66,3 +58,8 @@ function animateImage() {
 }
 
 animateImage();
+
+function playSound(soundId) {
+  var audio = document.getElementById(soundId);
+  audio.play();
+}
