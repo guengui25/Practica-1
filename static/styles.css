@@ -139,8 +139,12 @@ body {
   left: 0px;
 }
 
+#ET {
+  transition: transform 0.5s ease; /* Añade una transición suave para cambios de transformación */
+}
+
 #ET:hover{
-    animation: rotateAndMove 4s infinite;
+  animation: rotateAndMove 2s forwards; /* Aplica la animación al pasar el ratón y mantiene el último estado */
 }
 
 /*====================
@@ -158,13 +162,13 @@ Animaciones
 
 @keyframes rotateAndMove {
   0% {
-    transform: rotate(0deg) translate(300px,300px);
+    transform: rotate(0deg) translateX(0);
   }
   50% {
-    transform: rotate(360deg) translate(-300px,-300px);
+    transform: rotate(180deg) translateX(50px);
   }
   100% {
-    transform: rotate(0deg) translate(300px,300px);
+    transform: rotate(360deg) translateX(0);
   }
 }
 
